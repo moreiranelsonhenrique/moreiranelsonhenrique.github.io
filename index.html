@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Henrique Moreira | Portfólio de BI</title>
+    <!-- Link para ícones modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Cabeçalho / Banner Principal */
+        header {
+            background: linear-gradient(135deg, #0f4c81 0%, #1d3557 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #a8dadc;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Botões de Redes Sociais */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-social {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-social:hover {
+            background: white;
+            color: #0f4c81;
+            transform: translateY(-2px);
+        }
+
+        /* Seção de Projetos */
+        main {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #1d3557;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #0f4c81;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Container do Projeto (Grid) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        /* Card do Projeto */
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e1e8ed;
+        }
+
+        @media (min-width: 768px) {
+            .project-card {
+                flex-direction: row;
+            }
+            .project-image {
+                width: 45%;
+                min-height: 300px;
+            }
+            .project-info {
+                width: 55%;
+            }
+        }
+
+        /* Espaço placeholder para imagem enquanto você não sobe os prints */
+        .project-image {
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: 500;
+            font-size: 1.1rem;
+            min-height: 200px;
+            border-right: 1px solid #f1f5f9;
+        }
+
+        .project-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            color: #1d3557;
+            margin-bottom: 12px;
+        }
+
+        .project-info p {
+            color: #626d7a;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Badges de Tecnologias */
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            background: #eef2f7;
+            color: #475569;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Botões do Projeto */
+        .project-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-action {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: #0f4c81;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d3557;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #475569;
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f8fafc;
+            color: #1e293b;
+            border-color: #94a3b8;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho de Apresentação -->
+    <header>
+        <div class="profile-container">
+            <h1>Nelson Moreira</h1>
+            <p>Profissional de Business Intelligence focado em transformar dados complexos em soluções visuais estratégicas e de alta performance.</p>
+            
+            <div class="social-links">
+                <!-- Substitua o '#' pelo link real do seu LinkedIn depois se desejar -->
+                <a href="#" target="_blank" class="btn-social">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:moreiranelsonhenrique@gmail.com" class="btn-social">
+                    <i class="fas fa-envelope"></i> Contato
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Principal de Projetos -->
+    <main>
+        <h2 class="section-title">Meus Projetos</h2>
+
+        <div class="projects-grid">
+            <!-- Card do Projeto Bi-Book Contoso -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-chart-bar" style="font-size: 2.5rem; margin-right: 10px; color: #0f4c81;"></i> 
+                    <span>Bi-Book Contoso</span>
+                </div>
+                <div class="project-info">
+                    <h3>Bi-Book Corporativo - Contoso Inc.</h3>
+                    <p>
+                        Solução completa de Business Intelligence dividida em visões modulares focadas no negócio. 
+                        Inclui análise detalhada de performance financeira comercial, monitoramento de perdas operacionais 
+                        com controle de Devoluções e Descontos, e mapeamento do comportamento de compra através do Mix e Análise de Pedidos.
+                    </p>
+                    
+                    <div class="tech-badges">
+                        <span class="badge">Power BI</span>
+                        <span class="badge">DAX</span>
+                        <span class="badge">Modelagem Star Schema</span>
+                        <span class="badge">UX/UI Design</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <!-- Substitua o '#' pelo link de "Publicar na Web" do seu Power BI -->
+                        <a href="#" target="_blank" class="btn-action btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Acessar Dashboard
+                        </a>
+                        <!-- Link dinâmico para a documentação técnica no próprio repositório -->
+                        <a href="https://github.com/moreiranelsonhenrique/moreiranelsonhenrique.github.io" target="_blank" class="btn-action btn-secondary">
+                            <i class="fab fa-github"></i> Documentação
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nelson Moreira. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
