@@ -385,6 +385,18 @@
                         border-radius: 12px;
                         box-shadow: 0 4px 14px rgba(15, 76, 129, 0.06);
                         overflow: hidden; /* Força o alinhamento perfeito dentro do container */
+                        transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    }
+
+                    /* Efeito suave ao passar o mouse por cima do GIF clicável */
+                    .dashboard-single-showcase a {
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                    .dashboard-single-showcase a:hover .main-hd-card {
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 20px rgba(15, 76, 129, 0.12);
                     }
 
                     .hd-img-container {
@@ -396,39 +408,20 @@
                         height: auto;
                         display: block;
                     }
-
-                    .hd-showcase-caption {
-                        font-size: 0.95rem;
-                        color: #1e3a8a;
-                        padding: 14px;
-                        text-align: center;
-                        background: #f8fafc;
-                        border-top: 1px solid #e2e8f0;
-                        font-weight: 600;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 8px;
-                    }
-
-                    .hd-showcase-caption i {
-                        color: #0f4c81;
-                    }
                 </style>
 
-                <!-- Container da imagem corrigido -->
+                <!-- Container do GIF dinâmico e clicável -->
                 <div class="dashboard-single-showcase">
-                    <div class="main-hd-card">
-                        <div class="hd-img-container">
-                            <img src="assets/contoso_sales.gif" alt="Painel de Performance Financeira - Contoso Inc.">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiM2ExNWI4MTUtZDVkNy00ZTM0LWFjMDYtN2I0MmMyNWZkNzQwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer">
+                        <div class="main-hd-card">
+                            <div class="hd-img-container">
+                                <img src="assets/contoso_sales.gif" alt="Painel de Performance Financeira - Contoso Inc.">
+                            </div>
                         </div>
-                        <div class="hd-showcase-caption">
-                            <i class="fas fa-chart-line"></i> Visão Principal: Performance Financeira
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Bloco 1: Origem e Contexto (Agora perfeitamente alinhado de volta para dentro) -->
+                <!-- Bloco 1: Origem e Contexto -->
                 <div class="case-block">
                     <h4><i class="fas fa-database"></i> Origem dos Dados e Contexto do Negócio</h4>
                     <p>
@@ -480,7 +473,7 @@
                         <div class="visao-box">
                             <div>
                                 <h5>2. Devoluções e Descontos</h5>
-                                <p>Monitora o impacto financeiro direto das concessões comerciais e das devoluções sobre o resultado global da companhia. Correlaciona o histórico mensal da taxa de desconto com o da taxa de devolução — permitindo à equipe de vendas identificar se os estímulos promocionais geram incremento real de vendas ou apenas antecipam devoluções.</p>
+                                <p>Monitora o impacto financeiro direto das concessões comerciais e das devoluções sobre o resultado global da companhia. Correlaciona o histórico mensal da taxa de desconto com o da taxa de devolução — permitindo à equipe de vendas identificar se os原始 estímulos promocionais geram incremento real de vendas ou apenas antecipam devoluções.</p>
                             </div>
                             <div class="decision-highlight">
                                 <strong>Decisão suportada:</strong> Revisão de política comercial e fluxos de pós-venda, com base em quais produtos e canais concentram o maior custo de devolução relativo.
@@ -492,7 +485,7 @@
                                 <p>Examina o comportamento macro de compra através de métricas de eficiência como Ticket Médio, Itens por Pedido e SKUs Ativos. A aplicação do princípio de Pareto sobre o volume de itens vendidos por categoria torna imediata a leitura de concentração, destacando graficamente as linhas que respondem por 80% do volume transacionado.</p>
                             </div>
                             <div class="decision-highlight">
-                                <strong>Decisão suportada:</strong> Estruturação de estratégias de cross-selling, organização de portfólio físico/digital e ações de marketing para aumentar o tamanho do carrinho, focando nas categorias de maior densidade de itens por pedido.
+                                <strong>Decisão suportada:</strong> Estruturação de estratégias de cross-selling, organization de portfólio físico/digital e ações de marketing para aumentar o tamanho do carrinho, focando nas categorias de maior densidade de itens por pedido.
                             </div>
                         </div>
                     </div>
