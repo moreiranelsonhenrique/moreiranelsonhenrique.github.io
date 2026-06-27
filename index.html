@@ -405,74 +405,77 @@
                 
                 <!-- NOVA GALERIA IMPACTANTE COM DESTAQUE E ZOOM -->
 <style>
-    /* Estrutura da vitrine */
+    /* Vitrine de layouts */
     .dashboard-showcase {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 30px;
         margin-bottom: 35px;
     }
 
-    /* Container dos Cards - Bloqueia a imagem de sair para fora do card, criando o efeito de lente */
+    /* Grid para as visões menores */
+    .secondary-showcase-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 25px;
+    }
+
+    /* Estrutura unificada dos Cards (Removido o overflow:hidden) */
     .main-showcase, .secondary-card {
         width: 100%;
         background: #fff;
         border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        overflow: hidden; /* Crucial para o efeito de lupa funcionar */
+        border-radius: 12px;
         box-shadow: 0 4px 12px rgba(15, 76, 129, 0.05);
-        transition: box-shadow 0.3s ease;
-    }
-
-    /* Grid das visões menores */
-    .secondary-showcase-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        gap: 20px;
-    }
-
-    /* Efeito de Lupa Avançado nas Imagens */
-    .main-showcase .img-wrapper, .secondary-card .img-wrapper {
-        width: 100%;
-        overflow: hidden;
+        position: relative;
+        /* Garante que a imagem e a legenda fiquem juntas na transição */
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1;
         cursor: zoom-in;
     }
 
-    .main-showcase img, .secondary-card img {
+    /* Container interno da imagem (Sem travas de corte) */
+    .img-wrapper {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .img-wrapper img {
         width: 100%;
         height: auto;
         display: block;
-        /* Transição suave para dar o efeito de entrada e saída do zoom */
-        transition: transform 0.4s cubic-bezier(0.15, 1, 0.3, 1); 
-        /* Define que o zoom vai começar exatamente do centro */
-        transform-origin: center center; 
+        border-radius: 12px 12px 0 0;
     }
 
-    /* A MÁGICA DO ZOOM: Aumenta a imagem em 1.25x (25% maior) dentro do card */
-    .main-showcase:hover img, .secondary-card:hover img {
-        transform: scale(1.25); 
-    }
-
-    /* Estilo das legendas */
+    /* Legenda integrada ao card */
     .showcase-caption {
         font-size: 0.9rem;
         color: #1e3a8a;
-        padding: 12px;
+        padding: 14px;
         text-align: center;
         background: #f8fafc;
         border-top: 1px solid #e2e8f0;
+        border-radius: 0 0 12px 12px;
         font-weight: 600;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
-        position: relative;
-        z-index: 10;
     }
 
     .showcase-caption i {
         color: #0f4c81;
-        font-size: 0.85rem;
+    }
+
+    /* 🌟 O GRANDE TRUQUE DO ZOOM EXPOSTO 🌟 
+       Em vez de ampliar a imagem lá dentro, ampliamos o CARD INTEIRO para fora da tela.
+       O z-index: 10 faz ele flutuar por cima de textos, margens e outros blocos. */
+    .main-showcase:hover, .secondary-card:hover {
+        transform: scale(1.35); /* Aumenta o painel inteiro em 35% para fora */
+        box-shadow: 0 20px 38px rgba(15, 76, 129, 0.25); /* Sombra pesada de profundidade */
+        z-index: 10; /* Faz flutuar acima de qualquer elemento vizinho */
+        border-color: #0f4c81;
     }
 </style>
 
@@ -482,7 +485,7 @@
             <img src="assets/tela1.png" alt="Visão Principal: Performance Financeira Contoso">
         </div>
         <div class="showcase-caption">
-            <i class="fas fa-search-plus"></i> Visão 1: Performance Financeira (Passe o mouse para dar zoom)
+            <i class="fas fa-search-plus"></i> Visão 1: Performance Financeira (Passe o mouse para expandir)
         </div>
     </div>
 
@@ -505,7 +508,6 @@
         </div>
     </div>
 </div>
-
                 <!-- Bloco 1: Origem e Contexto -->
                 <div class="case-block">
                     <h4><i class="fas fa-database"></i> Origem dos Dados e Contexto do Negócio</h4>
