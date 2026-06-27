@@ -316,11 +316,6 @@
             font-weight: 600;
         }
 
-        .badge-dark {
-            background: #f1f5f9;
-            color: #475569;
-        }
-
         /* Rodapé */
         footer {
             text-align: center;
@@ -363,7 +358,7 @@
                 Bem-vindo ao meu portfólio de Business Intelligence.
             </p>
             <p class="intro-text">
-                Sou profissional da área de Finanças e utilizo a Análise de Dados para gerar insights de valor e apoiar a tomada de decisão estratégica. Este espaço demonstra minhas habilidades práticas em estruturação e modelagem de dados — desde os processos de ETL e análise exploratória até a criação de medidas avançadas em DAX e estruturas relacionais de grande porte. O foco é desenvolver soluções analíticas e dashboards funcionais que otimizem a tomada de decisão corporativa, unindo o conhecimento técnico à visão de negócios.
+                Sou profissional da área de Finanças e utilizo a Análise de Dados para gerar insights de valor e apoiar a tomada de decisão estratégica. Este espaço demonstra minhas habilidades práticas em estruturação e modelagem de dados — desde os processos de ETL e análise exploratória até a criação de medidas avançadas in DAX e estruturas relacionais de grande porte. O foco é desenvolver soluções analíticas e dashboards funcionais que otimizem a tomada de decisão corporativa, unindo o conhecimento técnico à visão de negócios.
             </p>
             <p class="intro-text" style="margin-bottom: 30px;">
                 Todos os projetos utilizam bases públicas ou fictícias, sempre em conformidade com a LGPD.
@@ -405,11 +400,10 @@
                         border: 1px solid #e2e8f0;
                         border-radius: 12px;
                         box-shadow: 0 4px 14px rgba(15, 76, 129, 0.06);
-                        overflow: hidden; /* Força o alinhamento perfeito dentro do container */
+                        overflow: hidden;
                         transition: transform 0.2s ease, box-shadow 0.2s ease;
                     }
 
-                    /* Efeito suave ao passar o mouse por cima do GIF clicável */
                     .dashboard-single-showcase a {
                         text-decoration: none;
                         display: block;
@@ -442,20 +436,20 @@
                     </a>
                 </div>
 
-                <!-- Bloco 1: Origem e Contexto -->
+                <!-- Bloco 1: Origem e Engenharia dos Dados (OPÇÃO 1 APLICADA + CORREÇÃO CONTINENTES) -->
                 <div class="case-block">
-                    <h4><i class="fas fa-database"></i> Origem dos Dados e Contexto do Negócio</h4>
+                    <h4><i class="fas fa-database"></i> Origem e Engenharia dos Dados</h4>
                     <p>
-                        Este projeto foi desenvolvido utilizando a <a href="https://www.microsoft.com/en-us/download/details.aspx?id=46801" target="_blank" class="case-link">base de dados pública e fictícia Contoso, disponibilizada pela Microsoft</a>. A Contoso simula uma multinacional do setor de varejo e eletroeletrônicos com operações em múltiplos continents — comercializando mais de <strong>1.500 SKUs ativos</strong> por meio de quatro canais distintos: Lojas Físicas (Store), E-commerce (Online), Revendedores (Reseller) e Catálogo. Cada canal possui sua própria dinâmica de ticket médio, política de desconto e comportamento de devolução, o que torna a análise integrada entre eles especialmente relevante para a gestão do resultado. 
+                        Este projeto foi desenvolvido utilizando a <a href="https://www.microsoft.com/en-us/download/details.aspx?id=46801" target="_blank" class="case-link">base de dados pública e fictícia Contoso, disponibilizada pela Microsoft</a>. A Contoso simula uma multinacional do setor de varejo e eletroeletrônicos com operações em múltiplos continentes — comercializando mais de <strong>1.500 SKUs ativos</strong> por meio de quatro canais distintos: Lojas Físicas (Store), E-commerce (Online), Revendedores (Reseller) e Catálogo. Cada canal possui sua própria dinâmica de ticket médio, política de desconto e comportamento de devolução, o que torna a análise integrada entre eles especialmente relevante para a gestão do resultado. 
                     </p>
                     <p>
-                        Para garantir robustez e performance ao trabalhar com um volume transacional massivo de <strong>mais de 2 milhões de linhas de registros</strong>, os dados brutos foram extraídos via DAX Studio diretamente do modelo semântico, tratados estruturalmente no Power Query e organizados sob uma modelagem relacional otimizada em <strong>Star Schema</strong> (Tabelas Fato e Dimensão). Toda a camada de inteligência analítica foi codificada puramente em DAX.
+                        Para garantir robustez e performance ao trabalhar com um volume transacional massivo de <strong>mais de 2 milhões de linhas de registros</strong>, os dados brutos foram extraídos via DAX Studio diretamente do modelo semântico, tratados estruturalmente no Power Query e organizados sob uma modelagem relacional otimizada em Tabelas Fato e Dimensão. Toda a camada de inteligência analítica foi codificada puramente em DAX.
                     </p>
                 </div>
 
-                <!-- Bloco Inserido: Modelo de Dados Star Schema -->
+                <!-- Bloco 2: Arquitetura e Modelagem de Dados -->
                 <div class="case-block">
-                    <h4><i class="fas fa-network-wired"></i> Arquitetura e Modelagem de Dados (Star Schema)</h4>
+                    <h4><i class="fas fa-network-wired"></i> Arquitetura e Modelagem de Dados</h4>
                     <p>
                         Abaixo está representada a modelagem relacional do projeto desenvolvida no Power BI. Para suportar o grande volume transacional garantindo a máxima performance nas expressões analíticas, a estrutura foi desenhada seguindo o conceito de <strong>Star Schema</strong>. As tabelas de dimensão filtram unidirecionalmente a tabela fato central, e as chaves de relacionamento foram totalmente ocultadas para blindar o modelo contra erros. As regras de negócio foram centralizadas em uma tabela exclusiva de medidas organizadas.
                     </p>
@@ -465,14 +459,14 @@
                     </div>
                 </div>
 
-                <!-- Bloco 2: Contexto e Visão de Negócio -->
+                <!-- Bloco 3: Desafios e Objetivos de Negócio (OPÇÃO 1 APLICADA) -->
                 <div class="case-block">
-                    <h4><i class="fas fa-lightbulb"></i> Contexto e Visão de Negócio</h4>
+                    <h4><i class="fas fa-lightbulb"></i> Desafios e Objetivos de Negócio</h4>
                     <p>
                         No varejo, a rentabilidade raramente se perde de uma vez. Ela escoa por decisões mal calibradas: descontos concedidos sem evidência de retorno, devoluções concentradas nos mesmos produtos, canais que vendem volume mas entregam margem abaixo do esperado.
                     </p>
                     <p>
-                        Os dados para enxergar isso existem — o desafio é estruturá-los de forma que respondam perguntas reais de gestão. Foi esse o ponto de partida deste projeto: transformar o volume transacional da Contoso in uma leitura clara sobre onde o resultado está sendo construído e onde está sendo perdido.
+                        Os dados para enxergar isso existem — o desafio é estruturá-los de forma que respondam perguntas reais de gestão. Foi esse o ponto de partida deste projeto: transformar o volume transacional da Contoso em uma leitura clara sobre onde o resultado está sendo construído e onde está sendo perdido.
                     </p>
                     <p>
                         Para isso, o dashboard foi estruturado sob a ótica financeira, respondendo diretamente a quatro perguntas estruturais de gestão corporativa:
@@ -486,7 +480,7 @@
                     </ul>
                 </div>
 
-                <!-- Bloco 3: Solução Modular -->
+                <!-- Bloco 4: Solução Modular -->
                 <div class="case-block">
                     <h4><i class="fas fa-layer-group"></i> Solução Modular — Bi-Book com 3 Visões Decisoriais</h4>
                     <p>
@@ -500,13 +494,14 @@
                                 <p>Acompanha a evolução da Receita Bruta, do CMV e da Margem Bruta Comercial, segmentados por canal e período. O Scatter Plot de Receita vs. Margem por categoria revela, em uma leitura única, quais linhas têm alto volume com margem comprimida — e quais têm margem elevada mas volume sub-explorado.</p>
                             </div>
                             <div class="decision-highlight">
-                                <strong>Decisão suportada:</strong>  Identificar se a queda de margem vem de mix de produto, aumento de custo ou política comercial inadequada por canal.
+                                <strong>Decisão suportada:</strong> Identificar se a queda de margem vem de mix de produto, aumento de custo ou política comercial inadequada por canal.
                             </div>
                         </div>
+                        <!-- VISÃO 2: REMOVIDO CARACTERE CHINES DETECTADO NA IMAGE_7C602B.PNG -->
                         <div class="visao-box">
                             <div>
                                 <h5>2. Devoluções e Descontos</h5>
-                                <p>Monitora o impacto financeiro direto das concessões comerciais e das devoluções sobre o resultado global da companhia. Correlaciona o histórico mensal da taxa de desconto com o da taxa de devolução — permitindo à equipe de vendas identificar se os原始 estímulos promocionais geram incremento real de vendas ou apenas antecipam devoluções.</p>
+                                <p>Monitora o impacto financeiro direto das concessões comerciais e das devoluções sobre o resultado global da companhia. Correlaciona o histórico mensal da taxa de desconto com o da taxa de devolução — permitindo à equipe de vendas identificar se os estímulos promocionais comerciais geram incremento real de vendas ou apenas antecipam devoluções.</p>
                             </div>
                             <div class="decision-highlight">
                                 <strong>Decisão suportada:</strong> Revisão de política comercial e fluxos de pós-venda, com base em quais produtos e canais concentram o maior custo de devolução relativo.
@@ -518,13 +513,13 @@
                                 <p>Examina o comportamento macro de compra através de métricas de eficiência como Ticket Médio, Itens por Pedido e SKUs Ativos. A aplicação do princípio de Pareto sobre o volume de itens vendidos por categoria torna imediata a leitura de concentração, destacando graficamente as linhas que respondem por 80% do volume transacionado.</p>
                             </div>
                             <div class="decision-highlight">
-                                <strong>Decisão suportada:</strong> Estruturação de estratégias de cross-selling, organization de portfólio físico/digital e ações de marketing para aumentar o tamanho do carrinho, focando nas categorias de maior densidade de itens por pedido.
+                                <strong>Decisão suportada:</strong> Estruturação de estratégias de cross-selling, organização de portfólio físico/digital e ações de marketing para aumentar o tamanho do carrinho, focando nas categorias de maior densidade de itens por pedido.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bloco 4: O que os dados revelaram (Insights de Negócio) -->
+                <!-- Bloco 5: O que os dados revelaram (Insights de Negócio) -->
                 <div class="case-block">
                     <h4><i class="fas fa-brain"></i> O que os dados revelaram (Insights de Negócio)</h4>
                     <div class="insights-grid">
@@ -540,7 +535,7 @@
                     </div>
                 </div>
 
-                <!-- Competências Técnicas do Projeto -->
+                <!-- Competências Técnicas do Projeto (CORRIGIDAS AS CORES CONFORME A IMAGE_7C6064.PNG) -->
                 <div class="case-block" style="margin-bottom: 0;">
                     <h4><i class="fas fa-tools"></i> Stack Técnico e Competências Aplicadas</h4>
                     <div class="stack-section">
@@ -556,10 +551,10 @@
                         <div class="stack-column">
                             <h5>Análise e Visualização</h5>
                             <div class="tech-badges">
-                                <span class="badge badge-dark">Lógica Financeira</span>
-                                <span class="badge badge-dark">Análise de Pareto</span>
-                                <span class="badge badge-dark">Scatter Plot</span>
-                                <span class="badge badge-dark">Análise YoY</span>
+                                <span class="badge">Lógica Financeira</span>
+                                <span class="badge">Análise de Pareto</span>
+                                <span class="badge">Scatter Plot</span>
+                                <span class="badge">Análise YoY</span>
                             </div>
                         </div>
                         <div class="stack-column">
@@ -573,7 +568,7 @@
                     </div>
                 </div>
 
-            </div> <!-- Fechamento correto da div .case-body -->
+            </div>
         </article>
     </main>
 
