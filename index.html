@@ -403,21 +403,114 @@
 
             <div class="case-body">
                 
-                <!-- Galeria de Imagens do Dashboard -->
-                <div class="dashboard-gallery">
-                    <div class="dashboard-img-container">
-                        <img src="assets/tela1.png" alt="Tela de Performance Financeira do Dashboard Contoso">
-                        <div class="img-caption">Visão 1: Performance Financeira</div>
-                    </div>
-                    <div class="dashboard-img-container">
-                        <img src="assets/tela2.png" alt="Tela de Devoluções e Descontos do Dashboard Contoso">
-                        <div class="img-caption">Visão 2: Devoluções e Descontos</div>
-                    </div>
-                    <div class="dashboard-img-container">
-                        <img src="assets/tela3.png" alt="Tela de Volume de Pedidos e Mix do Dashboard Contoso">
-                        <div class="img-caption">Visão 3: Volume de Pedidos e Mix (Análise de Pareto)</div>
-                    </div>
-                </div>
+                <!-- NOVA GALERIA IMPACTANTE COM DESTAQUE E ZOOM -->
+<style>
+    /* Nova estrutura da galeria */
+    .dashboard-showcase {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    /* Tela Principal em Destaque */
+    .main-showcase {
+        width: 100%;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(15, 76, 129, 0.05);
+        background: #fff;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        cursor: zoom-in;
+    }
+
+    .main-showcase:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 24px rgba(15, 76, 129, 0.15);
+    }
+
+    .main-showcase img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Grid secundária para as outras visões */
+    .secondary-showcase-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 20px;
+    }
+
+    .secondary-card {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        cursor: zoom-in;
+    }
+
+    .secondary-card:hover {
+        transform: scale(1.04);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-color: #0f4c81;
+    }
+
+    .secondary-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .showcase-caption {
+        font-size: 0.9rem;
+        color: #1e3a8a;
+        padding: 12px;
+        text-align: center;
+        background: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .showcase-caption i {
+        color: #0f4c81;
+        font-size: 0.8rem;
+    }
+</style>
+
+<div class="dashboard-showcase">
+    <!-- Destaque Principal: Performance Financeira (ou seu GIF em alta definição) -->
+    <div class="main-showcase">
+        <!-- Dica: Caso opte pelo GIF, basta mudar o arquivo para "assets/demonstracao.gif" -->
+        <img src="assets/tela1.png" alt="Visão Principal: Performance Financeira Contoso">
+        <div class="showcase-caption">
+            <i class="fas fa-search-plus"></i> Visão 1: Performance Financeira (Destaque — Passe o mouse para aproximar)
+        </div>
+    </div>
+
+    <!-- Linha Secundária: Visões de Apoio -->
+    <div class="secondary-showcase-grid">
+        <div class="secondary-card">
+            <img src="assets/tela2.png" alt="Visão 2: Devoluções e Descontos">
+            <div class="showcase-caption">
+                <i class="fas fa-search-plus"></i> Visão 2: Devoluções e Descontos
+            </div>
+        </div>
+        <div class="secondary-card">
+            <img src="assets/tela3.png" alt="Visão 3: Volume de Pedidos e Mix">
+            <div class="showcase-caption">
+                <i class="fas fa-search-plus"></i> Visão 3: Volume de Pedidos e Mix (Pareto)
+            </div>
+        </div>
+    </div>
+</div>
 
                 <!-- Bloco 1: Origem e Contexto -->
                 <div class="case-block">
