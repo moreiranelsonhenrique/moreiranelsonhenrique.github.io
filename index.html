@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson Henrique Moreira | Portfólio de BI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nelson Henrique Moreira | Portfólio de Finanças e BI</title>
+    <link rel="stylesheet" href="./Nelson Henrique Moreira _ Portfólio de Finanças e BI_files/all.min.css">
     <style>
         * {
             margin: 0;
@@ -67,9 +66,12 @@
             max-width: 1000px;
             margin: 60px auto;
             padding: 0 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         .section-title {
+            order: 0;
             font-size: 1.8rem;
             color: #0f4c81;
             margin-bottom: 40px;
@@ -77,6 +79,10 @@
             padding-bottom: 14px;
             border-bottom: 2px solid #e2e8f0;
         }
+
+        #case-grendene { order: 1; }
+        #case-mcdonalds { order: 2; }
+        #case-contoso { order: 3; }
 
         /* Card do Case Único */
         .case-card {
@@ -386,16 +392,13 @@
         <div class="container-wide">
             <h1>Nelson Henrique Moreira</h1>
             <p class="intro-text">
-                Bem-vindo ao meu portfólio de Business Intelligence.
-            </p>
-            <p class="intro-text">
-                Sou profissional da área de Finanças e utilizo a Análise de Dados para gerar insights de valor e apoiar a tomada de decisão estratégica. Este espaço demonstra minhas habilidades práticas em estruturação e modelagem de dados — desde os processos de ETL e análise exploratória até a criação de medidas avançadas in DAX e estruturas relacionais de grande porte. O foco é desenvolver soluções analíticas e dashboards funcionais que otimizem a tomada de decisão corporativa, unindo o conhecimento técnico à visão de negócios.
+                Profissional de Finanças com atuação em Business Intelligence e Análise de Dados. Transformo dados financeiros e operacionais em análises que apoiam decisões de negócio. Este portfólio reúne projetos desenvolvidos desde a estruturação e o tratamento dos dados até a modelagem, a criação de indicadores e a construção de dashboards orientados à decisão.
             </p>
             <p class="intro-text" style="margin-bottom: 30px;">
-                Todos os projetos utilizam bases públicas ou fictícias, sempre em conformidade com a LGPD.
+                Os projetos utilizam fontes públicas ou bases fictícias e não envolvem dados pessoais.
             </p>
             <div class="highlight-box">
-                <i class="fas fa-chart-pie"></i>&nbsp; Conectando dados, finanças e estratégia aplicados ao negócio.
+                <i class="fas fa-chart-pie"></i>&nbsp; Conectando dados, finanças e estratégia para apoiar decisões de negócio.
             </div>
         </div>
     </header>
@@ -404,12 +407,148 @@
     <main>
         <h2 class="section-title"><i class="fas fa-folder-open"></i> Projetos Desenvolvidos</h2>
 
-        <!-- Case Contoso -->
-        <article class="case-card">
+        <!-- Case Grendene -->
+        <article class="case-card" id="case-grendene">
             <div class="case-header">
                 <div class="case-title-wrapper">
                     <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #0f4c81;"></i>
-                    <h3>Bi-Book Corporativo – Contoso Inc.</h3>
+                    <h3>Análise Financeira — Grendene S.A. (2009–2025)</h3>
+                </div>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiZGY1NjI1NWEtOGVkOC00ZWFkLTk3N2UtMmMzYTk2YzQ4OTU1IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="btn-open-dashboard">
+                    <i class="fas fa-external-link-alt"></i> Acessar Dashboard Interativo
+                </a>
+            </div>
+
+            <div class="case-body">
+                <div class="dashboard-single-showcase">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZGY1NjI1NWEtOGVkOC00ZWFkLTk3N2UtMmMzYTk2YzQ4OTU1IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer">
+                        <div class="main-hd-card">
+                            <div class="hd-img-container">
+                                <img src="file:///C:/Users/hemor/Documents/Codex/2026-08-13/referenced-chatgpt-conversation-this-is-an/outputs/assets/grendene.gif" alt="Painel de Análise Financeira — Grendene S.A.">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="case-block">
+                    <p>
+                        Dashboard financeiro desenvolvido para analisar o desempenho da Grendene S.A. entre 2009 e 2025, conectando resultado, operação, rentabilidade, estrutura de capital, capital de giro e geração de caixa.
+                    </p>
+                    <p>
+                        O projeto combina análise financeira e BI para transformar demonstrações contábeis e dados operacionais em indicadores, relações financeiras e perguntas de negócio.
+                    </p>
+                </div>
+
+                <div class="case-block">
+                    <h4><i class="fas fa-database"></i> Origem e Tratamento dos Dados</h4>
+                    <p>
+                        A base foi construída a partir das demonstrações financeiras — Balanço Patrimonial, DRE e DFC — publicadas pela companhia em seu portal de Relações com Investidores, complementadas por dados operacionais de receita, volume, exportação e preço dos releases trimestrais.
+                    </p>
+                    <p>
+                        O tratamento e a estruturação dos dados foram realizados em Power Query, organizando a tabela em formato longo, com uma linha por combinação de demonstração, conta e período. Sobre essa base, foram desenvolvidas medidas em DAX para cálculos financeiros, comparações temporais e indicadores de rentabilidade, capital e geração de caixa.
+                    </p>
+                    <p>
+                        Durante o desenvolvimento, os dados também foram reconciliados para validar a consistência dos indicadores derivados.
+                    </p>
+                </div>
+
+                <div class="case-block">
+                    <h4><i class="fas fa-lightbulb"></i> Desafio e Perguntas de Negócio</h4>
+                    <p>
+                        O desempenho de uma empresa não se resume ao quanto ela vende ou lucra. Depende também de quanto capital a operação consome, de sua capacidade de converter lucro em caixa e do retorno obtido sobre os recursos empregados.
+                    </p>
+                    <p>
+                        A análise da Grendene foi estruturada a partir das seguintes perguntas:
+                    </p>
+                    <ul class="business-questions">
+                        <li><i class="fas fa-question-circle"></i> A Grendene está crescendo de forma rentável?</li>
+                        <li><i class="fas fa-question-circle"></i> O lucro está se convertendo em caixa?</li>
+                        <li><i class="fas fa-question-circle"></i> Quanto capital a operação consome?</li>
+                        <li><i class="fas fa-question-circle"></i> A companhia está obtendo retorno adequado sobre o capital empregado?</li>
+                        <li><i class="fas fa-question-circle"></i> O que explica as principais mudanças observadas ao longo do período?</li>
+                    </ul>
+                </div>
+
+                <div class="case-block">
+                    <h4><i class="fas fa-layer-group"></i> Solução Modular — Estrutura do Dashboard em 6 Visões</h4>
+                    <p>
+                        O dashboard foi estruturado em seis visões independentes e complementares, cobrindo as principais dimensões da análise financeira da companhia.
+                    </p>
+                    <div class="visoes-container">
+                        <div class="visao-box">
+                            <div>
+                                <h5>1. Demonstração do Resultado e Margens</h5>
+                                <p>Evolução da Receita Líquida, EBITDA, Lucro Líquido e respectivas margens ao longo do período, combinando variações YoY e CAGR para distinguir crescimento de receita de evolução da rentabilidade.</p>
+                            </div>
+                            <div class="decision-highlight"><strong>Decisão suportada:</strong> Identificar se as mudanças no resultado vêm do crescimento da receita ou de alterações na eficiência operacional e nas margens.</div>
+                        </div>
+                        <div class="visao-box">
+                            <div>
+                                <h5>2. Receita, Exportação e Volume</h5>
+                                <p>Receita Bruta das Vendas, volume de pares vendidos, preço médio, participação entre mercado interno e exportação e exposição cambial, permitindo separar crescimento por volume de crescimento por preço e mix.</p>
+                            </div>
+                            <div class="decision-highlight"><strong>Decisão suportada:</strong> Entender quais fatores explicam a evolução da receita e como a exposição internacional influencia o crescimento e o mix da companhia.</div>
+                        </div>
+                        <div class="visao-box">
+                            <div>
+                                <h5>3. Rentabilidade e Retorno sobre o Capital</h5>
+                                <p>Decomposição DuPont do ROE em margem, giro dos ativos e alavancagem, acompanhada da evolução do ROIC e do custo da dívida.</p>
+                            </div>
+                            <div class="decision-highlight"><strong>Decisão suportada:</strong> Identificar se o retorno da companhia vem principalmente da eficiência operacional, utilização dos ativos ou estrutura financeira.</div>
+                        </div>
+                        <div class="visao-box">
+                            <div>
+                                <h5>4. Estrutura de Capital e Endividamento</h5>
+                                <p>Dívida bruta, posição de caixa, dívida líquida, liquidez e alavancagem, permitindo acompanhar a dependência de capital de terceiros e a flexibilidade financeira ao longo do tempo.</p>
+                            </div>
+                            <div class="decision-highlight"><strong>Decisão suportada:</strong> Avaliar a capacidade da companhia de sustentar investimentos, distribuições e obrigações sem comprometer sua estrutura financeira.</div>
+                        </div>
+                        <div class="visao-box">
+                            <div>
+                                <h5>5. Capital de Giro e Ciclo Operacional</h5>
+                                <p>NCG, CGL e Saldo de Tesouraria analisados em conjunto com PMR, PME, PMP e Ciclo de Conversão de Caixa.</p>
+                            </div>
+                            <div class="decision-highlight"><strong>Decisão suportada:</strong> Identificar se a operação está consumindo ou liberando capital e quais componentes do ciclo financeiro mais pressionam a geração de caixa.</div>
+                        </div>
+                        <div class="visao-box">
+                            <div>
+                                <h5>6. Geração e Qualidade do Caixa</h5>
+                                <p>Fluxo de Caixa Operacional, Capex, Fluxo de Caixa Livre e Fluxo de Caixa do Acionista, acompanhando a conversão do lucro em caixa e a reconciliação da movimentação entre as demonstrações.</p>
+                            </div>
+                            <div class="decision-highlight"><strong>Decisão suportada:</strong> Avaliar quanto do resultado se transforma efetivamente em caixa disponível para reinvestimento, redução de dívida ou distribuição aos acionistas.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-block">
+                    <h4><i class="fas fa-brain"></i> O que os dados revelaram (Insights de Negócio)</h4>
+                    <div class="insights-grid">
+                        <div class="insight-card"><p><strong>Crescimento passou a depender mais de preço e mix do que de volume:</strong> Entre 2009 e 2025, a receita líquida avançou de R$ 1,4 bilhão para R$ 2,5 bilhões, enquanto o volume vendido recuou de 165 milhões para 124 milhões de pares. Em 2025, o volume caiu 11,1%, mas a receita recuou apenas 1,7%, sugerindo uma evolução sustentada menos por volume e mais por preço e mix.</p></div>
+                        <div class="insight-card"><p><strong>Em 2025, a pressão esteve na margem, não na receita:</strong> A receita líquida ficou praticamente estável, em R$ 2,5 bilhões, mas o EBITDA caiu 33,8%, para R$ 425 milhões, levando a margem EBITDA para 16,5%, queda de 5 p.p. A principal pressão do período esteve na conversão das vendas em resultado operacional.</p></div>
+                        <div class="insight-card"><p><strong>A posição de caixa tem peso relevante na formação do resultado:</strong> A companhia encerrou 2025 com cerca de R$ 1,4 bilhão em caixa líquido e dívida financeira bruta próxima de R$ 69 milhões. Essa estrutura gerou aproximadamente R$ 352 milhões de resultado financeiro positivo, contribuindo de forma relevante para o lucro líquido de R$ 644 milhões.</p></div>
+                        <div class="insight-card"><p><strong>O ROE segue positivo, mas o retorno operacional perdeu força:</strong> O ROE permaneceu em 17,92% em 2025, sustentado por margem líquida de 25% e baixa alavancagem financeira. Já o ROIC recuou de 20,15% em 2024 para 11,79% em 2025, enquanto o spread ROIC–Kd atingiu -10 p.p. Isso não comprova isoladamente destruição de valor, pois exigiria comparação com o WACC, mas evidencia perda de força no retorno operacional sobre o capital empregado.</p></div>
+                        <div class="insight-card"><p><strong>O capital de giro continua consumindo recursos relevantes:</strong> O ciclo de caixa atingiu 218 dias em 2025, acima da referência histórica de 197 dias, e a necessidade de capital de giro permaneceu elevada, em aproximadamente R$ 1,3 bilhão. A queda da liquidez deve ser interpretada com ressalva: cerca de R$ 980 milhões em dividendos extraordinários foram classificados no passivo circulante, reduzindo o CGL sem uma mudança equivalente na NCG.</p></div>
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Os dados retratam uma companhia financeiramente robusta, capaz de sustentar receita com menor volume físico e apoiada por uma posição de caixa líquido relevante. Em 2025, o principal desafio passa a ser recuperar margem operacional, eficiência do capital e conversão do resultado em caixa.</strong></p>
+                </div>
+
+                <div class="case-block" style="margin-bottom: 0;">
+                    <h4><i class="fas fa-tools"></i> Stack Técnico e Competências Aplicadas</h4>
+                    <div class="stack-section">
+                        <div class="stack-column"><h5>Dados e Transformação</h5><div class="tech-badges"><span class="badge">Power Query (ETL)</span><span class="badge">Reconciliação Financeira</span><span class="badge">Validação e Auditoria de Dados</span></div></div>
+                        <div class="stack-column"><h5>Modelagem e Análise</h5><div class="tech-badges"><span class="badge">DAX</span><span class="badge">Modelagem de Dados</span><span class="badge">Análise de Demonstrações Financeiras</span><span class="badge">Finanças Corporativas</span><span class="badge">Rentabilidade e Retorno sobre Capital</span><span class="badge">Capital de Giro</span><span class="badge">Fluxo de Caixa</span></div></div>
+                        <div class="stack-column"><h5>Visualização e Comunicação</h5><div class="tech-badges"><span class="badge">Power BI</span><span class="badge">Arquitetura de Dashboard</span><span class="badge">Storytelling Orientado à Decisão</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Case Contoso -->
+        <article class="case-card" id="case-contoso">
+            <div class="case-header">
+                <div class="case-title-wrapper">
+                    <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #0f4c81;"></i>
+                    <h3>BI Book Corporativo – Contoso Inc.</h3>
                 </div>
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiM2ExNWI4MTUtZDVkNy00ZTM0LWFjMDYtN2I0MmMyNWZkNzQwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="btn-open-dashboard">
                     <i class="fas fa-external-link-alt"></i> Acessar Dashboard Interativo
@@ -461,7 +600,7 @@
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiM2ExNWI4MTUtZDVkNy00ZTM0LWFjMDYtN2I0MmMyNWZkNzQwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer">
                         <div class="main-hd-card">
                             <div class="hd-img-container">
-                                <img src="assets/contoso_sales.gif" alt="Painel de Performance Financeira - Contoso Inc.">
+                                <img src="file:///C:/Users/hemor/Documents/Codex/2026-08-13/referenced-chatgpt-conversation-this-is-an/outputs/assets/contoso_sales.gif" alt="Painel de Performance Financeira - Contoso Inc.">
                             </div>
                         </div>
                     </a>
@@ -474,7 +613,7 @@
                         Este projeto foi desenvolvido utilizando a <a href="https://www.microsoft.com/en-us/download/details.aspx?id=46801" target="_blank" class="case-link">base de dados pública e fictícia Contoso, disponibilizada pela Microsoft</a>. A Contoso simula uma multinacional do setor de varejo e eletroeletrônicos com operações em múltiplos continentes — comercializando mais de <strong>1.500 SKUs ativos</strong> por meio de quatro canais distintos: Lojas Físicas (Store), E-commerce (Online), Revendedores (Reseller) e Catálogo. Cada canal possui sua própria dinâmica de ticket médio, política de desconto e comportamento de devolução, o que torna a análise integrada entre eles especialmente relevante para a gestão do resultado. 
                     </p>
                     <p>
-                        Para garantir robustez e performance ao trabalhar com um volume transacional massivo de <strong>mais de 2 milhões de linhas de registros</strong>, os dados brutos foram extraídos via DAX Studio diretamente do modelo semântico, tratados estruturalmente no Power Query e organizados sob uma modelagem relacional otimizada em Tabelas Fato e Dimensão. Toda a camada de inteligência analítica foi codificada puramente em DAX.
+                        Para trabalhar com um volume transacional de <strong>mais de 2 milhões de registros</strong>, os dados brutos foram extraídos via DAX Studio diretamente do modelo semântico, tratados no Power Query e organizados em uma modelagem relacional otimizada com tabelas fato e dimensões. A camada de inteligência analítica foi desenvolvida em DAX.
                     </p>
                 </div>
 
@@ -482,11 +621,11 @@
                 <div class="case-block">
                     <h4><i class="fas fa-network-wired"></i> Arquitetura e Modelagem de Dados</h4>
                     <p>
-                        Abaixo está representada a modelagem relacional do projeto desenvolvida no Power BI. Para suportar o grande volume transacional garantindo a máxima performance nas expressões analíticas, a estrutura foi desenhada seguindo o conceito de <strong>Star Schema</strong>. As tabelas de dimensão filtram unidirecionalmente a tabela fato central, e as chaves de relacionamento foram totalmente ocultadas para blindar o modelo contra erros. As regras de negócio foram centralizadas em uma tabela exclusiva de medidas organizadas.
+                        Abaixo está representada a modelagem relacional do projeto desenvolvida no Power BI. Para suportar o volume transacional e otimizar as expressões analíticas, a estrutura foi desenhada seguindo o conceito de <strong>Star Schema</strong>. As tabelas de dimensão filtram unidirecionalmente a tabela fato central, e as chaves de relacionamento foram ocultadas para reduzir o risco de erros no uso do modelo. As regras de negócio foram centralizadas em uma tabela exclusiva de medidas organizadas.
                     </p>
                     
                     <div class="model-diagram-container">
-                        <img src="assets/modelo de dados.png" alt="Diagrama do Modelo de Dados Star Schema - Contoso Inc." class="model-diagram-img">
+                        <img src="file:///C:/Users/hemor/Documents/Codex/2026-08-13/referenced-chatgpt-conversation-this-is-an/outputs/assets/modelo%20de%20dados.png" alt="Diagrama do Modelo de Dados Star Schema - Contoso Inc." class="model-diagram-img">
                     </div>
                 </div>
 
@@ -513,7 +652,7 @@
 
                 <!-- Bloco 4: Solução Modular -->
                 <div class="case-block">
-                    <h4><i class="fas fa-layer-group"></i> Solução Modular — Bi-Book com 3 Visões Decisoriais</h4>
+                    <h4><i class="fas fa-layer-group"></i> Solução Modular — BI Book com 3 Visões Decisoriais</h4>
                     <p>
                         O dashboard foi dividido em três visões independentes e complementares, cada uma orientada a um eixo de decisão distinto:
                     </p>
@@ -555,13 +694,13 @@
                     <h4><i class="fas fa-brain"></i> O que os dados revelaram (Insights de Negócio)</h4>
                     <div class="insights-grid">
                         <div class="insight-card">
-                            <p><strong>Qualidade de venda no físico:</strong> O canal <em>Store</em> concentra 58,2% da receita bruta e 58,5% das devoluções globais. Essa proporção quase idêntica sugere que o alto volume não está se convertendo em boas vendas, apontando a necessidade de revisão nos processos de pós-venda e atendimento físico.</p>
+                            <p><strong>Devoluções no canal físico:</strong> O canal <em>Store</em> concentra 58,2% da receita bruta e 58,5% das devoluções globais. A participação ligeiramente superior nas devoluções indica a necessidade de avaliar a taxa de devolução por canal, produto e motivo, direcionando eventuais revisões de pós-venda e atendimento físico.</p>
                         </div>
                         <div class="insight-card">
-                            <p><strong>Mix vs. Margem:</strong> A categoria <em>Music, Movies & Audio Books</em> opera com uma excelente margem bruta acima de 60% (quase 5 pontos acima da média), mas representa apenas 2% da receita bruta. Em contrapartida, <em>Computers</em> lidera o faturamento (+38% da receita) com margem de 57%. Há uma oportunidade clara de rebalancear o mix promocional em favor das categorias mais rentáveis.</p>
+                            <p><strong>Mix vs. Margem:</strong> A categoria <em>Music, Movies &amp; Audio Books</em> opera com uma excelente margem bruta acima de 60% (quase 5 pontos acima da média), mas representa apenas 2% da receita bruta. Em contrapartida, <em>Computers</em> lidera o faturamento (+38% da receita) com margem de 57%. Há uma oportunidade clara de rebalancear o mix promocional em favor das categorias mais rentáveis.</p>
                         </div>
                         <div class="insight-card">
-                            <p><strong>Carrinho grande, Ticket pequeno:</strong> <em>Cell phones</em> lidera em volume com 3,9 Mi de itens vendidos e 36% de concentração, mas opera com ticket médio de $2.200 — cerca de 80% abaixo do ticket de <em>Computers</em> ($3.970). A categoria que mais vende em quantidade é a que menos rentabiliza por pedido, sinalizando oportunidade clara de estratégia de upsell e bundle para elevar o valor do carrinho dentro da própria categoria.</p>
+                            <p><strong>Maior volume, menor ticket:</strong> <em>Cell phones</em> lidera em volume com 3,9 Mi de itens vendidos e 36% de concentração, mas opera com ticket médio de $2.200 — cerca de 45% abaixo do ticket de <em>Computers</em> ($3.970). A categoria que mais vende em quantidade é a que menos rentabiliza por pedido, sinalizando oportunidade clara de estratégia de upsell e bundle para elevar o valor do carrinho dentro da própria categoria.</p>
                         </div>
                     </div>
                 </div>
@@ -605,7 +744,7 @@
 
 
 <!-- Case McDonald's -->
-<article class="case-card">
+<article class="case-card" id="case-mcdonalds">
     <div class="case-header">
         <div class="case-title-wrapper">
             <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #0f4c81;"></i>
@@ -623,7 +762,7 @@
             <a href="https://app.powerbi.com/view?r=eyJrIjoiYzQ3NmFiMWMtOTNlYi00YjMwLWFmZTYtZDk0MGZkOGU0ZDg2IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer">
                 <div class="main-hd-card">
                     <div class="hd-img-container">
-                        <img src="assets/mcdonalds_dashboard.gif" alt="Painel de Análise Financeira Histórica - McDonald's Corporation">
+                        <img src="file:///C:/Users/hemor/Documents/Codex/2026-08-13/referenced-chatgpt-conversation-this-is-an/outputs/assets/mcdonalds_dashboard.gif" alt="Painel de Análise Financeira Histórica - McDonald&#39;s Corporation">
                     </div>
                 </div>
             </a>
@@ -645,10 +784,10 @@
             <p>
                 A análise teve como ponto de partida uma <a href="https://www.kaggle.com/datasets/mikhail1681/mcdonalds-financial-statements-2002-2022/data" target="_blank" class="case-link">base pública disponível no Kaggle</a>, com dados financeiros históricos da McDonald's Corporation entre 2002 e 2022.</p> 
 <p>
-Durante a validação dos indicadores, identifiquei divergências entre métricas calculadas na base e referências de mercado, especialmente no payout ratio, ROA e ROE. A busca revelou uma inconsistência relevante: o campo identificado como Lucro Líquido correspondia, na prática, ao Resultado Antes dos Tributos (EBT).
+Durante a validação dos indicadores, identifiquei divergências entre métricas calculadas na base e referências de mercado, especialmente no payout ratio, ROA e ROE. A validação revelou uma inconsistência relevante: o campo identificado como Lucro Líquido correspondia, na prática, ao Resultado Antes dos Tributos (EBT).
             </p>
             <p>
-                Para corrigir a base, consultei os formulários 10-K arquivados pela empresa na <a href="https://www.sec.gov/edgar/search/#/ciks=0000063908&entityName=MCDONALDS%2520CORP%2520(MCD)%2520(CIK%25200000063908)" target="_blank" class="case-link">SEC (U.S. Securities and Exchange Commission)</a> e extraí informações diretamente das demonstrações financeiras oficiais, incluindo:
+                Para corrigir a base, consultei os formulários 10-K arquivados pela empresa na <a href="https://www.sec.gov/edgar/search/#/ciks=0000063908&amp;entityName=MCDONALDS%2520CORP%2520(MCD)%2520(CIK%25200000063908)" target="_blank" class="case-link">SEC (U.S. Securities and Exchange Commission)</a> e extraí informações diretamente das demonstrações financeiras oficiais, incluindo:
             </p>
 
             <ul class="info-list">
@@ -807,8 +946,9 @@ Durante a validação dos indicadores, identifiquei divergências entre métrica
     </main>
 
     <footer>
-        <p>&copy; 2026 Nelson Henrique Moreira. Todos os direitos reservados. Projetos focados em Business Analytics.</p>
+        <p>© 2026 Nelson Henrique Moreira. Todos os direitos reservados. Projetos focados em Business Analytics.</p>
     </footer>
 
-</body>
-</html>
+
+
+</body></html>
