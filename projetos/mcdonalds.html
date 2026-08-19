@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise McDonald's Corporation (2002–2022) | Nelson Henrique Moreira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="project-page">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar aos projetos
+        </a>
+
+        <article class="case-card" id="case-mcdonalds">
+    <div class="case-header">
+        <div class="case-title-wrapper">
+            <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #0f4c81;"></i>
+            <h3>Análise McDonald's Corporation (2002–2022)</h3>
+        </div>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiYzQ3NmFiMWMtOTNlYi00YjMwLWFmZTYtZDk0MGZkOGU0ZDg2IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="btn-open-dashboard">
+            <i class="fas fa-external-link-alt"></i> Acessar Dashboard Interativo
+        </a>
+    </div>
+
+    <div class="case-body">
+
+        <!-- Container do GIF dinâmico e clicável -->
+        <div class="dashboard-single-showcase">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYzQ3NmFiMWMtOTNlYi00YjMwLWFmZTYtZDk0MGZkOGU0ZDg2IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer">
+                <div class="main-hd-card">
+                    <div class="hd-img-container">
+                        <img src="../assets/mcdonalds_dashboard.gif" alt="Painel de Análise Financeira Histórica - McDonald's Corporation">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Apresentação Inicial do Projeto -->
+        <div class="case-block">
+            <p>
+                Dashboard financeiro desenvolvido para analisar a evolução operacional, estrutura de capital e a geração de valor ao acionista da McDonald's ao longo de 21 anos.
+            </p>
+            <p>
+                O projeto vai além da visualização de indicadores: envolveu curadoria de dados, reconciliação com demonstrações financeiras oficiais e análise crítica das decisões estratégicas que ajudaram a transformar o modelo de negócio da companhia.
+            </p>
+        </div>
+
+        <!-- Bloco 1: Origem e Tratamento dos Dados -->
+        <div class="case-block">
+            <h4><i class="fas fa-database"></i> Origem e Tratamento dos Dados</h4>
+            <p>
+                A análise teve como ponto de partida uma <a href="https://www.kaggle.com/datasets/mikhail1681/mcdonalds-financial-statements-2002-2022/data" target="_blank" class="case-link">base pública disponível no Kaggle</a>, com dados financeiros históricos da McDonald's Corporation entre 2002 e 2022.</p> 
+<p>
+Durante a validação dos indicadores, identifiquei divergências entre métricas calculadas na base e referências de mercado, especialmente no payout ratio, ROA e ROE. A validação revelou uma inconsistência relevante: o campo identificado como Lucro Líquido correspondia, na prática, ao Resultado Antes dos Tributos (EBT).
+            </p>
+            <p>
+                Para corrigir a base, consultei os formulários 10-K arquivados pela empresa na <a href="https://www.sec.gov/edgar/search/#/ciks=0000063908&entityName=MCDONALDS%2520CORP%2520(MCD)%2520(CIK%25200000063908)" target="_blank" class="case-link">SEC (U.S. Securities and Exchange Commission)</a> e extraí informações diretamente das demonstrações financeiras oficiais, incluindo:
+            </p>
+
+            <ul class="info-list">
+                <li> Lucro líquido</li>
+                <li> EBIT</li>
+                <li> Despesas financeiras com juros</li>
+                <li> Receita segmentada entre franquias e lojas próprias</li>
+            </ul>
+
+            <p>
+                Em seguida, reconciliei a receita consolidada com a soma dos segmentos e validei os indicadores recalculados. O resultado foi uma base estruturada, tratada e mais aderente às divulgações oficiais da empresa.
+            </p>
+        </div>
+
+        <!-- Bloco 2: Desafio Metodológico -->
+        <div class="case-block">
+            <h4><i class="fas fa-lightbulb"></i> Desafio Metodológico</h4>
+            <p>
+                Em 2016, o Patrimônio Líquido da McDonald's tornou-se negativo, motivado principalmente pelo volume de recompras de ações realizadas pela companhia. Esse cenário limita a interpretação de indicadores tradicionais que dependem diretamente do patrimônio líquido, como ROE e P/VPA. Em vez de ocultar essa limitação, a análise foi adaptada para priorizar métricas mais adequadas ao contexto, como:
+            </p>
+
+            <ul class="info-list">
+                <li> TSR Index, para mensurar o retorno total ao acionista</li>
+                <li> EV/EBIT, para avaliar a empresa sem depender do patrimônio líquido</li>
+                <li> Índice de Cobertura de Juros, para acompanhar a capacidade operacional de suportar despesas financeiras</li>
+                <li> Dívida sobre ativos e dívida sobre patrimônio líquido, com interpretação contextualizada após a inversão do PL</li>
+            </ul>
+        </div>
+
+        <!-- Bloco 3: Pergunta de Negócio e Desafios -->
+        <div class="case-block">
+            <h4><i class="fas fa-question-circle"></i> Pergunta de Negócio e Desafios</h4>
+            <p>
+                Como uma empresa cuja receita apresentou crescimento moderado ao longo de duas décadas conseguiu aumentar de forma tão significativa seu valor de mercado? A análise considera que essa trajetória está associada à combinação de três fatores:
+            </p>
+
+            <ul class="info-list">
+                <li> Maior participação do modelo de franquias, estruturalmente mais rentável</li>
+                <li> Disciplina de custos e aumento das margens operacionais</li>
+                <li> Política de retorno ao acionista, com dividendos e recompra de ações</li>
+            </ul>
+
+            <p>
+                O projeto foi estruturado para responder a questões de controladoria e finanças corporativas:
+            </p>
+
+            <ul class="business-questions">
+                <li><i class="fas fa-question-circle"></i> A empresa se tornou mais rentável ou apenas alterou a composição das receitas?</li>
+                <li><i class="fas fa-question-circle"></i> O avanço do Lucro por Ação foi operacional ou foi motivado pela redução de ações em circulação?</li>
+                <li><i class="fas fa-question-circle"></i> A mudança para franquias aumentou a eficiência econômica do negócio?</li>
+                <li><i class="fas fa-question-circle"></i> A valorização de mercado acompanhou os fundamentos operacionais?</li>
+                <li><i class="fas fa-question-circle"></i> O aumento do endividamento se manteve alinhado à capacidade de pagamento?</li>
+            </ul>
+        </div>
+
+        <!-- Bloco 4: Solução Modular -->
+        <div class="case-block">
+            <h4><i class="fas fa-layer-group"></i> Solução Modular — Estrutura do Dashboard em 4 Visões</h4>
+            <p>
+                O dashboard foi dividido em quatro visões independentes e complementares, cada uma orientada a um eixo de decisão distinto:
+            </p>
+
+            <div class="visoes-container" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="visao-box">
+                    <div>
+                        <h5>1. Panorama Estratégico</h5>
+                        <p>Visão executiva que consolida Receita, Lucro Líquido, Valor de Mercado e Lucro por Ação ao longo de 21 anos. O painel destaca as taxas de crescimento composto e evidencia que o valor de mercado cresceu em ritmo muito superior ao faturamento, reforçando a relevância da eficiência operacional, da estratégia de franquias e da alocação de capital.</p>
+                    </div>
+                    <div class="decision-highlight">
+                        <strong>Decisão suportada:</strong> Evidenciar que o valor de mercado cresceu em ritmo muito superior ao faturamento, reforçando a relevância da eficiência operacional e da alocação de capital.
+                    </div>
+                </div>
+                <div class="visao-box">
+                    <div>
+                        <h5>2. Eficiência Operacional</h5>
+                        <p>Análise da mudança de composição de receita entre lojas próprias e franquias. A página mostra o crescimento da participação das franquias e compara as margens operacionais dos dois modelos, permitindo avaliar como a migração para receitas mais leves em ativos contribuiu para a rentabilidade consolidada.</p>
+                    </div>
+                    <div class="decision-highlight">
+                        <strong>Decisão suportada:</strong> Avaliar como a migração para receitas mais leves em ativos contribuiu para a rentabilidade consolidada.
+                    </div>
+                </div>
+                <div class="visao-box">
+                    <div>
+                        <h5>3. Estrutura de Capital</h5>
+                        <p>Acompanhamento da evolução de ativos, passivos, patrimônio líquido, alavancagem e cobertura financeira. O destaque é o tratamento analítico do patrimônio líquido negativo a partir de 2016, evitando leituras automáticas de insolvência e relacionando a estrutura de capital à capacidade de geração de resultado e pagamento de juros.</p>
+                    </div>
+                    <div class="decision-highlight">
+                        <strong>Decisão suportada:</strong> Evitar leituras automáticas de insolvência, relacionando a estrutura de capital à capacidade de geração de resultado e pagamento de juros.
+                    </div>
+                </div>
+                <div class="visao-box">
+                    <div>
+                        <h5>4. Valor ao Acionista</h5>
+                        <p>Análise integrada de dividendos, lucro por ação, recompra de ações, valor da firma e retorno total ao acionista. O painel demonstra como a redução das ações em circulação contribuiu para a evolução do LPA, enquanto o TSR Index sintetiza a criação de valor para o investidor no longo prazo.</p>
+                    </div>
+                    <div class="decision-highlight">
+                        <strong>Decisão suportada:</strong> Demonstrar como a redução das ações em circulação contribuiu para a evolução do LPA e para a criação de valor ao investidor no longo prazo.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloco 5: O que os dados revelaram (Insights de Negócio) -->
+        <div class="case-block">
+            <h4><i class="fas fa-brain"></i> O que os dados revelaram (Insights de Negócio)</h4>
+            <div class="insights-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="insight-card">
+                    <p><strong>Valorização superior ao crescimento da receita:</strong> Entre 2002 e 2022, a receita cresceu cerca de 60%, enquanto o valor de mercado avançou aproximadamente 847%. Os dados indicam que a valorização esteve associada não apenas ao crescimento do faturamento, mas também à melhora do perfil de rentabilidade e à política de retorno ao acionista.</p>
+                </div>
+                <div class="insight-card">
+                    <p><strong>Franquias como impulsionador de margem:</strong> As operações de franquia mantiveram margens operacionais muito superiores às lojas próprias, enquanto a participação da receita de franquias aumentou de forma relevante no período. Esse padrão é consistente com a estratégia de expansão de um modelo mais leve em ativos e mais rentável.</p>
+                </div>
+                <div class="insight-card">
+                    <p><strong>PL negativo exige leitura contextualizada:</strong> A inversão do patrimônio líquido após 2016 ocorreu em um contexto de recompras de ações. Apesar da maior alavancagem, a cobertura de juros permaneceu acima de 6x nos períodos analisados, indicando manutenção de capacidade operacional para suportar as despesas financeiras.</p>
+                </div>
+                <div class="insight-card">
+                    <p><strong>Recompra de ações e LPA:</strong> A redução gradual das ações em circulação ocorreu paralelamente à evolução do lucro por ação, mostrando como decisões de alocação de capital podem ampliar o retorno por ação mesmo sem crescimento proporcional do lucro líquido total.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competências Técnicas do Projeto -->
+        <div class="case-block" style="margin-bottom: 0;">
+            <h4><i class="fas fa-tools"></i> Stack Técnico e Competências Aplicadas</h4>
+            <div class="stack-section">
+                <div class="stack-column">
+                    <h5>Dados e Transformação</h5>
+                    <div class="tech-badges">
+                        <span class="badge">Power Query (ETL)</span>
+                        <span class="badge">Reconciliação Financeira</span>
+                        <span class="badge">Auditoria de Demonstrações</span>
+                    </div>
+                </div>
+                <div class="stack-column">
+                    <h5>Modelagem e Análise</h5>
+                    <div class="tech-badges">
+                        <span class="badge">DAX</span>
+                        <span class="badge">Indicadores Financeiros</span>
+                        <span class="badge">Estrutura de Capital</span>
+                        <span class="badge">Múltiplos de Mercado</span>
+                    </div>
+                </div>
+                <div class="stack-column">
+                    <h5>Visualização e Comunicação</h5>
+                    <div class="tech-badges">
+                        <span class="badge">Power BI</span>
+                        <span class="badge">Arquitetura de Dashboard</span>
+                        <span class="badge">Storytelling Orientado à Decisão</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</article>
+    </main>
+</body>
+</html>

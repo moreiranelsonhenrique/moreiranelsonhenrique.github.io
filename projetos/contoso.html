@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoso Inc. – BI Book Corporativo | Nelson Henrique Moreira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="project-page">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar aos projetos
+        </a>
+
+        <article class="case-card" id="case-contoso">
+            <div class="case-header">
+                <div class="case-title-wrapper">
+                    <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #0f4c81;"></i>
+                    <h3>BI Book Corporativo – Contoso Inc.</h3>
+                </div>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiM2ExNWI4MTUtZDVkNy00ZTM0LWFjMDYtN2I0MmMyNWZkNzQwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="btn-open-dashboard">
+                    <i class="fas fa-external-link-alt"></i> Acessar Dashboard Interativo
+                </a>
+            </div>
+
+            <div class="case-body">
+                
+                <!-- ESTILOS EXCLUSIVOS DA IMAGEM PRINCIPAL HD -->
+                
+
+                <!-- Container do GIF dinâmico e clicável -->
+                <div class="dashboard-single-showcase">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiM2ExNWI4MTUtZDVkNy00ZTM0LWFjMDYtN2I0MmMyNWZkNzQwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" rel="noopener noreferrer">
+                        <div class="main-hd-card">
+                            <div class="hd-img-container">
+                                <img src="../assets/contoso_sales.gif" alt="Painel de Performance Financeira - Contoso Inc.">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bloco 1: Origem e Engenharia dos Dados (OPÇÃO 1 APLICADA + CORREÇÃO CONTINENTES) -->
+                <div class="case-block">
+                    <h4><i class="fas fa-database"></i> Origem e Engenharia dos Dados</h4>
+                    <p>
+                        Este projeto foi desenvolvido utilizando a <a href="https://www.microsoft.com/en-us/download/details.aspx?id=46801" target="_blank" class="case-link">base de dados pública e fictícia Contoso, disponibilizada pela Microsoft</a>. A Contoso simula uma multinacional do setor de varejo e eletroeletrônicos com operações em múltiplos continentes — comercializando mais de <strong>1.500 SKUs ativos</strong> por meio de quatro canais distintos: Lojas Físicas (Store), E-commerce (Online), Revendedores (Reseller) e Catálogo. Cada canal possui sua própria dinâmica de ticket médio, política de desconto e comportamento de devolução, o que torna a análise integrada entre eles especialmente relevante para a gestão do resultado. 
+                    </p>
+                    <p>
+                        Para trabalhar com um volume transacional de <strong>mais de 2 milhões de registros</strong>, os dados brutos foram extraídos via DAX Studio diretamente do modelo semântico, tratados no Power Query e organizados em uma modelagem relacional otimizada com tabelas fato e dimensões. A camada de inteligência analítica foi desenvolvida em DAX.
+                    </p>
+                </div>
+
+                <!-- Bloco 2: Arquitetura e Modelagem de Dados -->
+                <div class="case-block">
+                    <h4><i class="fas fa-network-wired"></i> Arquitetura e Modelagem de Dados</h4>
+                    <p>
+                        Abaixo está representada a modelagem relacional do projeto desenvolvida no Power BI. Para suportar o volume transacional e otimizar as expressões analíticas, a estrutura foi desenhada seguindo o conceito de <strong>Star Schema</strong>. As tabelas de dimensão filtram unidirecionalmente a tabela fato central, e as chaves de relacionamento foram ocultadas para reduzir o risco de erros no uso do modelo. As regras de negócio foram centralizadas em uma tabela exclusiva de medidas organizadas.
+                    </p>
+                    
+                    <div class="model-diagram-container">
+                        <img src="../assets/modelo de dados.png" alt="Diagrama do Modelo de Dados Star Schema - Contoso Inc." class="model-diagram-img">
+                    </div>
+                </div>
+
+                <!-- Bloco 3: Desafios e Objetivos de Negócio (OPÇÃO 1 APLICADA) -->
+                <div class="case-block">
+                    <h4><i class="fas fa-lightbulb"></i> Desafios e Objetivos de Negócio</h4>
+                    <p>
+                        No varejo, a rentabilidade raramente se perde de uma vez. Ela escoa por decisões mal calibradas: descontos concedidos sem evidência de retorno, devoluções concentradas nos mesmos produtos, canais que vendem volume mas entregam margem abaixo do esperado.
+                    </p>
+                    <p>
+                        Os dados para enxergar isso existem — o desafio é estruturá-los de forma que respondam perguntas reais de gestão. Foi esse o ponto de partida deste projeto: transformar o volume transacional da Contoso em uma leitura clara sobre onde o resultado está sendo construído e onde está sendo perdido.
+                    </p>
+                    <p>
+                        Para isso, o dashboard foi estruturado sob a ótica financeira, respondendo diretamente a quatro perguntas estruturais de gestão corporativa:
+                    </p>
+                    
+                    <ul class="business-questions">
+                        <li><i class="fas fa-question-circle"></i> As campanhas promocionais trouxeram ganho real ou apenas sacrificaram a margem líquida?</li>
+                        <li><i class="fas fa-question-circle"></i> O que variou a rentabilidade: mudança na concentração do mix de produtos ou aumento de custos operacionais?</li>
+                        <li><i class="fas fa-question-circle"></i> Quais categorias e SKUs sustentam o faturamento e quais performam abaixo do esperado?</li>
+                        <li><i class="fas fa-question-circle"></i> Onde estão os gargalos logísticos de devolução e qual canal penaliza mais o resultado?</li>
+                    </ul>
+                </div>
+
+                <!-- Bloco 4: Solução Modular -->
+                <div class="case-block">
+                    <h4><i class="fas fa-layer-group"></i> Solução Modular — BI Book com 3 Visões Decisoriais</h4>
+                    <p>
+                        O dashboard foi dividido em três visões independentes e complementares, cada uma orientada a um eixo de decisão distinto:
+                    </p>
+                    
+                    <div class="visoes-container">
+                        <div class="visao-box">
+                            <div>
+                                <h5>1. Performance Financeira</h5>
+                                <p>Acompanha a evolução da Receita Bruta, do CMV e da Margem Bruta Comercial, segmentados por canal e período. O Scatter Plot de Receita vs. Margem por categoria revela, em uma leitura única, quais linhas têm alto volume com margem comprimida — e quais têm margem elevada mas volume sub-explorado.</p>
+                            </div>
+                            <div class="decision-highlight">
+                                <strong>Decisão suportada:</strong> Identificar se a queda de margem vem de mix de produto, aumento de custo ou política comercial inadequada por canal.
+                            </div>
+                        </div>
+                        <!-- VISÃO 2: REMOVIDO CARACTERE CHINES DETECTADO NA IMAGE_7C602B.PNG -->
+                        <div class="visao-box">
+                            <div>
+                                <h5>2. Devoluções e Descontos</h5>
+                                <p>Monitora o impacto financeiro direto das concessões comerciais e das devoluções sobre o resultado global da companhia. Correlaciona o histórico mensal da taxa de desconto com o da taxa de devolução — permitindo à equipe de vendas identificar se os estímulos promocionais comerciais geram incremento real de vendas ou apenas antecipam devoluções.</p>
+                            </div>
+                            <div class="decision-highlight">
+                                <strong>Decisão suportada:</strong> Revisão de política comercial e fluxos de pós-venda, com base em quais produtos e canais concentram o maior custo de devolução relativo.
+                            </div>
+                        </div>
+                        <div class="visao-box">
+                            <div>
+                                <h5>3. Volume de Pedidos e Mix</h5>
+                                <p>Examina o comportamento macro de compra através de métricas de eficiência como Ticket Médio, Itens por Pedido e SKUs Ativos. A aplicação do princípio de Pareto sobre o volume de itens vendidos por categoria torna imediata a leitura de concentração, destacando graficamente as linhas que respondem por 80% do volume transacionado.</p>
+                            </div>
+                            <div class="decision-highlight">
+                                <strong>Decisão suportada:</strong> Estruturação de estratégias de cross-selling, organização de portfólio físico/digital e ações de marketing para aumentar o tamanho do carrinho, focando nas categorias de maior densidade de itens por pedido.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloco 5: O que os dados revelaram (Insights de Negócio) -->
+                <div class="case-block">
+                    <h4><i class="fas fa-brain"></i> O que os dados revelaram (Insights de Negócio)</h4>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <p><strong>Devoluções no canal físico:</strong> O canal <em>Store</em> concentra 58,2% da receita bruta e 58,5% das devoluções globais. A participação ligeiramente superior nas devoluções indica a necessidade de avaliar a taxa de devolução por canal, produto e motivo, direcionando eventuais revisões de pós-venda e atendimento físico.</p>
+                        </div>
+                        <div class="insight-card">
+                            <p><strong>Mix vs. Margem:</strong> A categoria <em>Music, Movies & Audio Books</em> opera com uma excelente margem bruta acima de 60% (quase 5 pontos acima da média), mas representa apenas 2% da receita bruta. Em contrapartida, <em>Computers</em> lidera o faturamento (+38% da receita) com margem de 57%. Há uma oportunidade clara de rebalancear o mix promocional em favor das categorias mais rentáveis.</p>
+                        </div>
+                        <div class="insight-card">
+                            <p><strong>Maior volume, menor ticket:</strong> <em>Cell phones</em> lidera em volume com 3,9 Mi de itens vendidos e 36% de concentração, mas opera com ticket médio de $2.200 — cerca de 45% abaixo do ticket de <em>Computers</em> ($3.970). A categoria que mais vende em quantidade é a que menos rentabiliza por pedido, sinalizando oportunidade clara de estratégia de upsell e bundle para elevar o valor do carrinho dentro da própria categoria.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competências Técnicas do Projeto (CORRIGIDAS AS CORES CONFORME A IMAGE_7C6064.PNG) -->
+                <div class="case-block" style="margin-bottom: 0;">
+                    <h4><i class="fas fa-tools"></i> Stack Técnico e Competências Aplicadas</h4>
+                    <div class="stack-section">
+                        <div class="stack-column">
+                            <h5>Dados e Modelagem</h5>
+                            <div class="tech-badges">
+                                <span class="badge">DAX Studio</span>
+                                <span class="badge">Power Query (ETL)</span>
+                                <span class="badge">Star Schema</span>
+                                <span class="badge">DAX Avançado</span>
+                            </div>
+                        </div>
+                        <div class="stack-column">
+                            <h5>Análise e Visualização</h5>
+                            <div class="tech-badges">
+                                <span class="badge">Lógica Financeira</span>
+                                <span class="badge">Análise de Pareto</span>
+                                <span class="badge">Scatter Plot</span>
+                                <span class="badge">Análise YoY</span>
+                            </div>
+                        </div>
+                        <div class="stack-column">
+                            <h5>Design</h5>
+                            <div class="tech-badges">
+                                <span class="badge">UX Orientado à Decisão</span>
+                                <span class="badge">Hierarquia Visual</span>
+                                <span class="badge">Consistência de Linguagem</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
